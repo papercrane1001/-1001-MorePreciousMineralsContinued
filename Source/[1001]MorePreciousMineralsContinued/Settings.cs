@@ -31,16 +31,19 @@ namespace _1001_MorePreciousMineralsContinued
             if(Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 if(percentIncrease < 0) { percentIncrease = 0; }
-                else if(percentIncrease > 200) { percentIncrease = 200; }
+                else if(percentIncrease >= 200) { percentIncrease = 200; }
                 SettingsController.percentIncreaseBuffer = percentIncrease.ToString();
 
-
-                GenStepDef def = DefDatabase<GenStepDef>.GetNamed("PreciousLump");
-                if(def.genStep as GenStep_PreciousLump != null)
+                if(DefDatabase<GenStepDef>.AllDefs.Count() > 0)
                 {
-                    GenStep_PreciousLump gsLump = (GenStep_PreciousLump)def.genStep;
-                    gsLump.totalValueRange = new FloatRange(valueRangeMin, valueRangeMax);
+                    GenStepDef def = DefDatabase<GenStepDef>.GetNamed("PreciousLump");
+                    if (def.genStep != null && def.genStep as GenStep_PreciousLump != null)
+                    {
+                        GenStep_PreciousLump gsLump = (GenStep_PreciousLump)def.genStep;
+                        gsLump.totalValueRange = new FloatRange(valueRangeMin, valueRangeMax);
+                    }
                 }
+                
             }
         }
 
@@ -70,9 +73,11 @@ namespace _1001_MorePreciousMineralsContinued
             percentIncreaseBuffer = Widgets.TextField(new Rect(inRect.xMin + 110, inRect.yMin, 100, 32), percentIncreaseBuffer);
             if(int.TryParse(percentIncreaseBuffer.Trim(), out int i))
             {
-                if(i > 0 && i < 200) { Settings.percentIncrease = i; }
+                if(i > 0 && i <= 200) { Settings.percentIncrease = i; }
                 else if(percentIncreaseBuffer.Trim() == "") { Settings.percentIncrease = 0; }
+                percentIncreaseBuffer = Settings.percentIncrease.ToString();
             }
+            Log.Message(Settings.percentIncrease.ToString());
             GenStepDef def = DefDatabase<GenStepDef>.GetNamed("PreciousLump");
             if (def.genStep as GenStep_PreciousLump != null)
             {
