@@ -23,11 +23,11 @@ namespace _1001_MorePreciousMineralsContinued
 
         public override void ExposeData()
         {
-            Log.Message("Point 0");
+            //Log.Message("Point 0");
             base.ExposeData();
-            Log.Message("Point 1");
+            //Log.Message("Point 1");
             Scribe_Values.Look(ref percentIncrease, "MorePreciousMineralsContinued.percentIncrease", 50);
-            Log.Message("Point 2");
+            //Log.Message("Point 2");
             if(Scribe.mode == LoadSaveMode.PostLoadInit)
             {
                 if(percentIncrease < 0) { percentIncrease = 0; }
@@ -65,10 +65,8 @@ namespace _1001_MorePreciousMineralsContinued
         }
         public override void DoSettingsWindowContents(UnityEngine.Rect inRect)
         {
-            Log.Message("Point3");
+            //Log.Message("Point3");
 
-
-            //base.DoSettingsWindowContents(inRect);
             Widgets.Label(new UnityEngine.Rect(inRect.xMin, inRect.yMin, 100, 32), "MorePreciousMineralsContinued.percentIncrease".Translate());
             percentIncreaseBuffer = Widgets.TextField(new Rect(inRect.xMin + 110, inRect.yMin, 100, 32), percentIncreaseBuffer);
             if(int.TryParse(percentIncreaseBuffer.Trim(), out int i))
