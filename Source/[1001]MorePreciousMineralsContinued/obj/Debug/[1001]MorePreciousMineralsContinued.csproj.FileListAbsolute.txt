@@ -1,0 +1,5 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[1001]MorePreciousMineralsContinued\Assemblies\[1001]MorePreciousMineralsContinued.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[1001]MorePreciousMineralsContinued\Source\[1001]MorePreciousMineralsContinued\obj\Debug\[1001]MorePreciousMineralsContinued.csproj.AssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[1001]MorePreciousMineralsContinued\Source\[1001]MorePreciousMineralsContinued\obj\Debug\[1001]MorePreciousMineralsContinued.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[1001]MorePreciousMineralsContinued\Source\[1001]MorePreciousMineralsContinued\obj\Debug\[1001]MorePreciousMineralsContinued.csproj.CopyComplete
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\[1001]MorePreciousMineralsContinued\Source\[1001]MorePreciousMineralsContinued\obj\Debug\[1001]MorePreciousMineralsContinued.dll
